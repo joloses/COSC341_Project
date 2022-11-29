@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Entry_Screen">
+
+    <TextView
+        android:id="@+id/ES_txtbox1"
+        android:layout_width="360dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="125dp"
+        android:text="TeamUp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="45sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ES_GetStarted"
+        android:layout_width="315dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="150dp"
+        android:backgroundTint="@color/blue"
+        android:text="Get Started"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/ES_txtbox2"
+        android:layout_width="286dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="50dp"
+        android:text="Welcome to TeamUp!"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ES_txtbox1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

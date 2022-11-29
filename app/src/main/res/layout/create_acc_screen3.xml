@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Create_Acc_Screen3">
+
+    <TextView
+        android:id="@+id/pronoun_txtbox"
+        android:layout_width="315dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="100dp"
+        android:text="What are your preferred pronouns? "
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ca1_nxtbutt3"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/blue"
+        android:text="Next"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:layout_width="200dp"
+        android:layout_height="330dp"
+        app:layout_constraintBottom_toTopOf="@+id/ca1_nxtbutt3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pronoun_txtbox">
+
+        <RadioButton
+            android:id="@+id/radButt1"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="He/Him/His"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/radButt2"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="She/Her/Hers"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteY="50dp" />
+
+        <RadioButton
+            android:id="@+id/radButt3"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="They/Them/Theirs"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/radButt4"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Other"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/radButt5"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Prefer not to say"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

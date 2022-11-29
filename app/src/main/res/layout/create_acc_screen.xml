@@ -11,7 +11,7 @@
         android:layout_width="380dp"
         android:layout_height="30dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:text="Please enter your first name"
         android:textAlignment="textStart"
         android:textColor="#000000"
@@ -48,6 +48,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fname_txtbox" />
 
+    <TextView
+        android:id="@+id/age_txtbox"
+        android:layout_width="380dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:text="Please enter your age"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lname_filltxt" />
+
+    <EditText
+        android:id="@+id/age_filltxt"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/age_txtbox" />
+
     <EditText
         android:id="@+id/lname_filltxt"
         android:layout_width="380dp"
@@ -61,14 +89,16 @@
         app:layout_constraintTop_toBottomOf="@+id/lname_txtbox" />
 
     <Button
-        android:id="@+id/ca1_nxtbutt"
-        android:layout_width="194dp"
+        android:id="@+id/ca2_nxtbutt"
+        android:layout_width="200dp"
         android:layout_height="70dp"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="100dp"
         android:backgroundTint="@color/blue"
         android:text="Next"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

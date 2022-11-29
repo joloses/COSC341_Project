@@ -18,12 +18,13 @@ public class Entry_Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.entry_screen);
 
-        // set button
+        // create an account button
         es_button = findViewById(R.id.ES_GetStarted);
         es_button.setText("CREATE AN ACCOUNT");
         es_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // move on to next screen
                 Intent es_intent = new Intent(Entry_Screen.this, Create_Acc_Screen1.class);
                 startActivity(es_intent);
             }

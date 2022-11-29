@@ -21,32 +21,31 @@ public class Create_Acc_Screen1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_acc_screen);
 
-        // first name entry
+        // first name entry box
         fname = findViewById(R.id.fname_filltxt);
 
-        // last name entry
+        // last name entry box
         lname = findViewById(R.id.lname_filltxt);
 
-
+        // on button click
         next = findViewById(R.id.ca1_nxtbutt);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(fname.getText().toString().trim().length() < 1){
+                // check if first name has been entered
+                if(fname.getText().toString().trim().length() < 1) {
                     String errMsg = "Please enter a first name";
                     Toast.makeText(Create_Acc_Screen1.this, errMsg, Toast.LENGTH_LONG).show();
-                }
-
-                if(lname.getText().toString().trim().length() < 1){
+                    // check if last name has been entered
+                } else if(lname.getText().toString().trim().length() < 1){
                     String errMsg = "Please enter a last name";
                     Toast.makeText(Create_Acc_Screen1.this, errMsg, Toast.LENGTH_LONG).show();
+                    // move on to the next screen
+                } else {
+                    Intent ca_intent = new Intent(Create_Acc_Screen1.this, Create_Acc_Screen2.class);
+                    startActivity(ca_intent);
                 }
-
-                Intent ca_intent = new Intent(Create_Acc_Screen1.this, Create_Acc_Screen2.class);
-                startActivity(ca_intent);
-
             }
         });
-
     }
 }

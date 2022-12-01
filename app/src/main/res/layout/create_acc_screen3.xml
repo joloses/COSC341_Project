@@ -8,15 +8,15 @@
 
     <TextView
         android:id="@+id/pronoun_txtbox"
-        android:layout_width="315dp"
+        android:layout_width="340dp"
         android:layout_height="30dp"
         android:layout_marginTop="100dp"
         android:text="What are your preferred pronouns? "
         android:textAlignment="textStart"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,6 +45,7 @@
             android:id="@+id/radButt1"
             android:layout_width="200dp"
             android:layout_height="50dp"
+            android:checked="false"
             android:text="He/Him/His"
             android:textSize="20sp" />
 

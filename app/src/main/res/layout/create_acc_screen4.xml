@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Create_Acc_Screen4">
+
+    <TextView
+        android:id="@+id/sport_txtbox"
+        android:layout_width="195dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="100dp"
+        android:text="Select your sport(s)"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/otherFillText"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otherTxtBox" />
+
+    <TextView
+        android:id="@+id/otherTxtBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Other(s) seperated by commas:"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/soccerBox" />
+
+    <Button
+        android:id="@+id/ca1_nxtbutt3"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/blue"
+        android:text="Next"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/hockeyBox"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:text="Ice Hockey"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sport_txtbox" />
+
+    <CheckBox
+        android:id="@+id/basketballBox"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text="Basketball"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hockeyBox" />
+
+    <CheckBox
+        android:id="@+id/soccerBox"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text="Soccer"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/baseballBox" />
+
+    <CheckBox
+        android:id="@+id/baseballBox"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text="Baseball"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/basketballBox" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,6 +29,10 @@ public class Chat extends AppCompatActivity {
         arr.add(findViewById(R.id.tv4));
         arr.add(findViewById(R.id.tv5));
         arr.add(findViewById(R.id.tv6));
+        arr.add(findViewById(R.id.tv7));
+        arr.add(findViewById(R.id.tv8));
+        arr.add(findViewById(R.id.tv9));
+        arr.add(findViewById(R.id.tv10));
         tv = arr.get(count);
     }
 
@@ -48,7 +52,15 @@ public class Chat extends AppCompatActivity {
         TextView t4 = arr.get(3);
         TextView t5 = arr.get(4);
         TextView t6 = arr.get(5);
+        TextView t7 = arr.get(6);
+        TextView t8 = arr.get(7);
+        TextView t9 = arr.get(8);
+        TextView t10 = arr.get(9);
 
+        t10.setText(t9.getText().toString());
+        t9.setText(t8.getText().toString());
+        t8.setText(t7.getText().toString());
+        t7.setText(t6.getText().toString());
         t6.setText(t5.getText().toString());
         t5.setText(t4.getText().toString());
         t4.setText(t3.getText().toString());
@@ -59,6 +71,8 @@ public class Chat extends AppCompatActivity {
     public void toChat(View view) {
         finish();
     }
+
+    public void back(View view) { finish(); }
 
     // methods to jump to different views
     /*

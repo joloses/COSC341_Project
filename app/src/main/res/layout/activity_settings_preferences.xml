@@ -15,6 +15,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Preferences"
+        android:textColor="#000000"
         android:textSize="26sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +27,7 @@
         android:layout_marginStart="62dp"
         android:layout_marginTop="43dp"
         android:text="Distance"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text1" />
@@ -37,6 +39,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="96dp"
         android:text="50 km"
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/distanceTxt"
         app:layout_constraintTop_toTopOf="parent" />
@@ -59,6 +62,7 @@
         android:layout_marginStart="62dp"
         android:layout_marginTop="103dp"
         android:text="Age (Min-Max)"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/distanceTxt" />
@@ -113,6 +117,7 @@
         android:layout_marginStart="62dp"
         android:layout_marginTop="64dp"
         android:text="Gender"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ageText" />
@@ -134,6 +139,7 @@
         android:layout_marginStart="60dp"
         android:layout_marginTop="48dp"
         android:text="Level of Play"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/genderChoice" />
@@ -155,7 +161,10 @@
         android:layout_marginStart="78dp"
         android:layout_marginEnd="66dp"
         android:layout_marginBottom="44dp"
+        android:backgroundTint="#0000FE"
+        android:onClick="toInfoContact"
         android:text="App / Contact Information"
+        app:iconTint="#000000"
         app:layout_constraintBottom_toTopOf="@+id/signOutBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -167,6 +176,7 @@
         android:layout_marginStart="154dp"
         android:layout_marginEnd="153dp"
         android:layout_marginBottom="66dp"
+        android:backgroundTint="#0000FE"
         android:text="Sign Out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

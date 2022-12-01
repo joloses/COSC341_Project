@@ -3,7 +3,9 @@ package com.example.cosc341_project;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,7 +35,7 @@ public class Settings_Preferences extends AppCompatActivity {
         distanceBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                distanceVal =(TextView)findViewById(R.id.distanceBarVal);
+                distanceVal = (TextView) findViewById(R.id.distanceBarVal);
                 distanceVal.setText(i + " km");
                 distanceChosen = i;
             }
@@ -60,7 +62,7 @@ public class Settings_Preferences extends AppCompatActivity {
 
 
         //Put gender choices in spinner and gather chosen option
-        String[] genderArray = new String[] {"No Preference" , "Male" , "Female"};
+        String[] genderArray = new String[]{"No Preference", "Male", "Female"};
         genderSpinner = findViewById(R.id.genderSpinner);
         ArrayAdapter<String> genderAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, genderArray);
@@ -69,7 +71,7 @@ public class Settings_Preferences extends AppCompatActivity {
         genderChosen = genderSpinner.getSelectedItem().toString();
 
         //Put level of play choices in spinner and gather chosen option
-        String[] levelArray = new String[] {"Casual/Fun" , "Training" , "(Semi) Pro"};
+        String[] levelArray = new String[]{"Casual/Fun", "Training", "(Semi) Pro"};
         levelSpinner = findViewById(R.id.levelSpinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, levelArray);
@@ -77,11 +79,20 @@ public class Settings_Preferences extends AppCompatActivity {
         levelSpinner.setAdapter(adapter);
         levelChosen = levelSpinner.getSelectedItem().toString();
 
-        //Set up information page here -> intent to new activity
+    }
 
+        //Set up information page here -> intent to new activity
+        public void toInfoContact(View v) {
+            Intent intent = new Intent(Settings_Preferences.this, App_Information.class);
+            startActivity(intent);
+        }
 
         //Set up signout page here -> intent to pop up confirming action then bring to main page (finish())
 
+
+
+    public void toPreviousActivity(View view){
+        super.onBackPressed();
     }
 
 }

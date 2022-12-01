@@ -91,8 +91,6 @@ public class Settings_Preferences extends AppCompatActivity {
 
 
 
-    public void toPreviousActivity(View view){
-        super.onBackPressed();
-    }
+
 
 }

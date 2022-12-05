@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -17,10 +18,23 @@ public class Chat extends AppCompatActivity {
     EditText et;
     int count = 0;
 
+    ImageView img;
+    TextView name;
+    int i;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
+
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+
+        img = findViewById(R.id.profilePic);
+        i = bundle.getInt("img");
+        setImg(i);
+        name = findViewById(R.id.chatName);
+        name.setText(bundle.getString("name"));
 
         et = findViewById(R.id.enterText);
         arr.add(findViewById(R.id.tv1));
@@ -34,6 +48,20 @@ public class Chat extends AppCompatActivity {
         arr.add(findViewById(R.id.tv9));
         arr.add(findViewById(R.id.tv10));
         tv = arr.get(count);
+    }
+
+    public void setImg(int i) {
+        switch (i) {
+            case 1:
+                img.setImageResource(R.drawable.rzhenie);
+                break;
+            case 2:
+                img.setImageResource(R.drawable.profile_icon);
+                break;
+            case 3:
+                img.setImageResource(R.drawable.beer);
+                break;
+        }
     }
 
     public void send(View view) {
@@ -72,7 +100,13 @@ public class Chat extends AppCompatActivity {
         finish();
     }
 
-    public void back(View view) { finish(); }
+    public void back(View view) {
+        Intent intent = new Intent();
+        intent.putExtra("lastMsg", arr.get(0).getText().toString());
+        intent.putExtra("i", Integer.toString(i));
+        setResult(1, intent);
+        finish();
+    }
 
     // methods to jump to different views
     /*

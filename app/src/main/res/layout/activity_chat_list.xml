@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:visibility="visible"
     tools:context=".Chat_List">
 
     <LinearLayout
@@ -87,7 +88,8 @@
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/border"
                 android:gravity="left"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="visible">
 
                 <ImageView
                     android:id="@+id/img1"
@@ -108,7 +110,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/sgTV"
+                        android:id="@+id/name1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -135,7 +137,8 @@
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/border"
                 android:gravity="left"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="visible">
 
                 <ImageView
                     android:id="@+id/img2"
@@ -156,7 +159,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/agTV"
+                        android:id="@+id/name2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -193,7 +196,8 @@
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/border"
                 android:gravity="left"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="visible">
 
                 <ImageView
                     android:id="@+id/img3"
@@ -214,7 +218,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/tgTV"
+                        android:id="@+id/name3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"

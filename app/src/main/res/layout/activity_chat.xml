@@ -48,7 +48,6 @@
             android:layout_margin="12dp"
             android:gravity="bottom"
             android:paddingRight="10dp"
-            android:text="last"
             android:textAlignment="textEnd"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -165,7 +164,6 @@
             android:layout_margin="12dp"
             android:gravity="bottom"
             android:paddingRight="10dp"
-            android:text="aaaaa"
             android:textAlignment="textEnd"
             android:textColor="@color/black"
             android:textSize="20sp" />

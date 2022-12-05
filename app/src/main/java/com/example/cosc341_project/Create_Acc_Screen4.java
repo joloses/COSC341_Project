@@ -15,11 +15,13 @@ public class Create_Acc_Screen4 extends AppCompatActivity {
     CheckBox sport1, sport2, sport3, sport4;
     EditText text1;
     Button nextButt;
+    Global data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_acc_screen4);
+        data = Global.getInstance();
 
         sport1 = findViewById(R.id.hockeyBox);
         sport2 = findViewById(R.id.basketballBox);
@@ -38,22 +40,27 @@ public class Create_Acc_Screen4 extends AppCompatActivity {
                 if(sport1.isChecked() == true) {
                     String s1 = (sport1.getText().toString());
                     bundleProfile4.putString("sport1", s1);
+                    data.sport1 += s1;
                 }
                 if(sport2.isChecked() == true) {
                     String s2 = (sport2.getText().toString());
                     bundleProfile4.putString("sport2", s2);
+                    data.sport2 += s2;
                 }
                 if(sport3.isChecked() == true) {
                     String s3 = (sport3.getText().toString());
                     bundleProfile4.putString("sport3", s3);
+                    data.sport3 += s3;
                 }
                 if(sport4.isChecked() == true) {
                     String s4 = (sport4.getText().toString());
                     bundleProfile4.putString("sport4", s4);
+                    data.sport4 += s4;
                 }
 
                 String s5 = text1.getText().toString();
                 bundleProfile4.putString("text1", s5);
+                data.sport5 += s5;
 
                 intentProfile4.putExtras(bundleProfile4);
                 startActivity(intentProfile4);

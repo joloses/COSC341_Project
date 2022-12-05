@@ -16,12 +16,15 @@ public class Create_Acc_Screen1 extends AppCompatActivity {
     EditText lname;
     EditText age;
     Button next;
+    Global data;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_acc_screen);
+
+        data = Global.getInstance();
 
         // first name entry
         fname = findViewById(R.id.fname_filltxt);
@@ -53,6 +56,10 @@ public class Create_Acc_Screen1 extends AppCompatActivity {
 
                     Intent intentProfile1 = new Intent(Create_Acc_Screen1.this, Create_Acc_Screen4.class);
                     Bundle bundleProfile1 = new Bundle();
+
+                    data.fname = fname.getText().toString();
+                    data.lname = lname.getText().toString();
+                    data.age = age.getText().toString();
 
                     bundleProfile1.putString("firstName", fname.getText().toString());
                     bundleProfile1.putString("lastName", lname.getText().toString());

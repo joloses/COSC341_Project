@@ -25,7 +25,7 @@
                 android:id="@+id/pic"
                 android:layout_width="match_parent"
                 android:layout_height="467dp"
-                app:srcCompat="@drawable/rzhenie" />
+                app:srcCompat="@drawable/flop" />
 
             <TextView
                 android:id="@+id/nameTV"
@@ -97,8 +97,8 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="63dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
         android:onClick="toSettings"
         android:text="settings"
         app:layout_constraintEnd_toEndOf="parent"

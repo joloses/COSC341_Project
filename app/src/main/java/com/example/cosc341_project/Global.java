@@ -1,7 +1,5 @@
 package com.example.cosc341_project;
 
-import java.util.ArrayList;
-
 public class Global {
     private static Global instance = new Global();
     boolean firstTime = true;
@@ -9,6 +7,16 @@ public class Global {
     int two = 0;
     int three = 0;
     int point = 0;
+
+    String fname = "";
+    String lname = "";
+    String age = "";
+    String gender = "";
+    String sport1 = "";
+    String sport2 = "";
+    String sport3 = "";
+    String sport4 = "";
+    String sport5 = "";
 
     public static Global getInstance() {
         return instance;

@@ -13,10 +13,13 @@ public class Create_Acc_Screen3 extends AppCompatActivity {
 
     RadioButton pro1, pro2, pro3, pro4, pro5;
     Button nextButt;
+    Global data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_acc_screen3);
+
+        data = Global.getInstance();
 
         pro1 = findViewById(R.id.radButt1);
         pro2 = findViewById(R.id.radButt2);
@@ -37,26 +40,31 @@ public class Create_Acc_Screen3 extends AppCompatActivity {
                 if(pro1.isChecked() == true) {
                     String s1 = (pro1.getText().toString());
                     bundleProfile3.putString("choice1", s1);
+                    data.gender = s1;
                     startActivity(nextPage3);
                     intentProfile3.putExtras(bundleProfile3);
                 } else if(pro2.isChecked() == true) {
                     String s2 = (pro2.getText().toString());
                     bundleProfile3.putString("choice2", s2);
+                    data.gender = s2;
                     startActivity(nextPage3);
                     intentProfile3.putExtras(bundleProfile3);
                 } else if(pro3.isChecked() == true) {
                     String s3 = (pro3.getText().toString());
                     bundleProfile3.putString("choice3", s3);
+                    data.gender = s3;
                     startActivity(nextPage3);
                     intentProfile3.putExtras(bundleProfile3);
                 } else if(pro4.isChecked() == true) {
                     String s4 = (pro4.getText().toString());
                     bundleProfile3.putString("choice4", s4);
+                    data.gender = s4;
                     startActivity(nextPage3);
                     intentProfile3.putExtras(bundleProfile3);
                 } else if(pro5.isChecked() == true) {
                     String s5 = (pro5.getText().toString());
                     bundleProfile3.putString("choice5", s5);
+                    data.gender = s5;
                     startActivity(nextPage3);
                     intentProfile3.putExtras(bundleProfile3);
                 } else {

@@ -2,6 +2,7 @@ package com.example.cosc341_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -110,15 +111,21 @@ public class Search extends AppCompatActivity {
         }
     }
 
-    /*
-    public void openProfile(View view) {
+    @SuppressLint("MissingSuperCall")
+    protected void onActivityResult (int requestCode, int resultCode, Intent data) {
 
     }
-     */
+
+
+    public void openProfile(View view) {
+        Intent intent = new Intent(this, SeeProfile.class);
+        intent.putExtra("num", Integer.toString(point));
+        startActivity(intent);
+    }
 
     public void toChat(View view) {
         Intent intent = new Intent(this, Chat_List.class);
-        startActivity(intent);
+        startActivityForResult(intent, 1);
     }
     // methods for dock buttons
     /*

@@ -24,11 +24,9 @@ public class Settings_Preferences extends AppCompatActivity {
 
     //Buttons
     Button signOutBtn, toProfileBtn, infoBtn;
-    // Distance Variables
-    SeekBar distanceBar;
-    TextView distanceVal;
-    // Age Variables
-    EditText editMinAge, editMaxAge;
+
+    // Age & Distance Variables
+    EditText editMinAge, editMaxAge, editDistance;
     //Spinners
     Spinner genderSpinner, levelSpinner;
     //Chosen Variables
@@ -48,28 +46,11 @@ public class Settings_Preferences extends AppCompatActivity {
 
         settingsBundle = new Bundle();
 
-        //Gather distance here, change distanceVal as seek bar moves.
-        distanceBar = findViewById(R.id.distanceBar);
-        distanceBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                distanceVal = findViewById(R.id.distanceBarVal);
-                distanceVal.setText(i + " km");
+        //Gather distance data here
+        editDistance = findViewById(R.id.editDistance);
+        distanceChosen = Integer.parseInt(editDistance.getText().toString());
+        settingsBundle.putInt("Distance", distanceChosen);
 
-                distanceChosen = i;
-                settingsBundle.putInt("Distance", distanceChosen);
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
 
         //Gather min and max age data here, take input as string and convert to Integer
         editMinAge = findViewById(R.id.editMinAge);
@@ -187,7 +168,7 @@ public class Settings_Preferences extends AppCompatActivity {
     }
 
     public void backToProfile(View v) {
-        Intent intent = new Intent(Settings_Preferences.this, Create_Acc_Screen4.class); //CHANGE TO PROFILE
+        Intent intent = new Intent(Settings_Preferences.this, Profile.class);
         intent.putExtras(settingsBundle);
         startActivity(intent);
     }

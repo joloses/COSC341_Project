@@ -37,11 +37,11 @@ public class Profile extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*
+
     public void toSettings(View view) {
         Intent intent = new Intent(this, Settings_Preferences.class);
         startActivity(intent);
     }
 
-     */
+
 }

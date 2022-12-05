@@ -154,19 +154,48 @@
         app:layout_constraintTop_toBottomOf="@+id/genderSpinner"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="42dp"
+        android:text="Notifications"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/aboutBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switchNotif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="42dp"
+        android:OnClick="toggleNotifications"
+        android:checked="true"
+        android:onClick="toggleNotifications"
+        android:showText="true"
+        android:switchTextAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/aboutBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:checked="false" />
+
     <Button
         android:id="@+id/aboutBtn"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginStart="78dp"
         android:layout_marginEnd="66dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginBottom="19dp"
         android:backgroundTint="#0000FE"
         android:onClick="toInfoContact"
         android:text="App / Contact Information"
         app:iconTint="#000000"
         app:layout_constraintBottom_toTopOf="@+id/signOutBtn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -175,13 +204,14 @@
         android:layout_height="60dp"
         android:layout_marginStart="153dp"
         android:layout_marginEnd="153dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginBottom="33dp"
         android:OnClick="signOutConfirm"
         android:backgroundTint="#0000FE"
         android:onClick="signOutConfirm"
         android:text="Sign Out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button

@@ -40,29 +40,27 @@ public class Create_Acc_Screen1 extends AppCompatActivity {
                 if(fname.getText().toString().trim().length() < 1){
                     String errMsg = "Please enter a first name";
                     Toast.makeText(Create_Acc_Screen1.this, errMsg, Toast.LENGTH_LONG).show();
-                }
-
-                if(lname.getText().toString().trim().length() < 1){
+                } else if(lname.getText().toString().trim().length() < 1){
                     String errMsg = "Please enter a last name";
                     Toast.makeText(Create_Acc_Screen1.this, errMsg, Toast.LENGTH_LONG).show();
-                }
-
-                if(age.getText().toString().trim().length() < 1){
+                } else if(age.getText().toString().trim().length() < 1){
                     String errMsg = "Please enter your age";
                     Toast.makeText(Create_Acc_Screen1.this, errMsg, Toast.LENGTH_LONG).show();
+                } else {
+
+                    Intent nextPage1 = new Intent(Create_Acc_Screen1.this, Create_Acc_Screen2.class);
+                    startActivity(nextPage1);
+
+                    Intent intentProfile1 = new Intent(Create_Acc_Screen1.this, Create_Acc_Screen4.class);
+                    Bundle bundleProfile1 = new Bundle();
+
+                    bundleProfile1.putString("firstName", fname.getText().toString());
+                    bundleProfile1.putString("lastName", lname.getText().toString());
+                    bundleProfile1.putString("age", age.getText().toString());
+
+                    intentProfile1.putExtras(bundleProfile1);
+                    // profilePage.class
                 }
-
-                Intent nextPage1 = new Intent(Create_Acc_Screen1.this, Create_Acc_Screen2.class);
-                startActivity(nextPage1);
-
-                Intent intentProfile1 = new Intent(Create_Acc_Screen1.this, Create_Acc_Screen1.class);
-                Bundle bundleProfile1 = new Bundle();
-
-                bundleProfile1.putString("firstName", fname.getText().toString());
-                bundleProfile1.putString("lastName", lname.getText().toString());
-                bundleProfile1.putString("age", age.getText().toString());
-
-                intentProfile1.putExtras(bundleProfile1);
             }
         });
 

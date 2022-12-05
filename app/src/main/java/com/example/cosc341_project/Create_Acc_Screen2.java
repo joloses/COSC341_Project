@@ -57,13 +57,13 @@ public class Create_Acc_Screen2 extends AppCompatActivity {
                 } else {
                     Intent nextPage2 = new Intent(Create_Acc_Screen2.this, Create_Acc_Screen3.class);
                     startActivity(nextPage2);
+
+                    Intent intentProfile2 = new Intent(Create_Acc_Screen2.this, Create_Acc_Screen4.class);
+                    Bundle bundleProfile2 = new Bundle();
+
+                    bundleProfile2.putString("email", email.getText().toString());
+                    intentProfile2.putExtras(bundleProfile2);
                 }
-
-                Intent intentProfile2 = new Intent(Create_Acc_Screen2.this, Create_Acc_Screen1.class);
-                Bundle bundleProfile2 = new Bundle();
-
-                bundleProfile2.putString("email", email.getText().toString());
-                intentProfile2.putExtras(bundleProfile2);
             }
         });
     }

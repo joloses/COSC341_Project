@@ -32,10 +32,7 @@ public class Create_Acc_Screen4 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent nextPage4 = new Intent(Create_Acc_Screen4.this, Entry_Screen.class);
-                startActivity(nextPage4);
-
-                Intent intentProfile4 = new Intent(Create_Acc_Screen4.this, Create_Acc_Screen1.class);
+                Intent intentProfile4 = new Intent(Create_Acc_Screen4.this, Create_Acc_Screen4.class);
                 Bundle bundleProfile4 = new Bundle();
 
                 if(sport1.isChecked() == true) {
@@ -54,10 +51,12 @@ public class Create_Acc_Screen4 extends AppCompatActivity {
                     String s4 = (sport4.getText().toString());
                     bundleProfile4.putString("sport4", s4);
                 }
+
                 String s5 = text1.getText().toString();
                 bundleProfile4.putString("text1", s5);
 
                 intentProfile4.putExtras(bundleProfile4);
+                startActivity(intentProfile4);
             }
         });
     }

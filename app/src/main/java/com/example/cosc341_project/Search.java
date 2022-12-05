@@ -31,6 +31,7 @@ public class Search extends AppCompatActivity {
     ImageView profile_pic;
     TextView name;
     TextView desc;
+    TextView last;
 
     Button like;
     Button dislike;
@@ -45,12 +46,22 @@ public class Search extends AppCompatActivity {
         profile_pic = findViewById(R.id.profile_image);
         name = findViewById(R.id.name);
         desc = findViewById(R.id.desc);
+        last = findViewById(R.id.last);
         like = findViewById(R.id.like);
         dislike = findViewById(R.id.dislike);
 
         data = Global.getInstance(); // separate class to hold number of connections
-        if(!data.isFirst())
+        if(!data.isFirst()) {
+            last.setVisibility(View.VISIBLE);
             hide();
+        }
+        else if(data.getPoint() != 0) {
+            point = data.getPoint();
+            last.setVisibility(View.INVISIBLE);
+            profile_pic.setImageResource(image[point]);
+            name.setText(names[point]);
+            desc.setText(descs[point]);
+        }
     }
 
     public void hide() {
@@ -76,9 +87,10 @@ public class Search extends AppCompatActivity {
             profile_pic.setImageResource(image[point]);
             name.setText(names[point]);
             desc.setText(descs[point]);
+            data.setPoint(point);
         }
         else {
-            // show "No one" text
+            last.setVisibility(View.VISIBLE);
             data.changeFirst();
             hide();
         }
@@ -92,7 +104,7 @@ public class Search extends AppCompatActivity {
             desc.setText(descs[point]);
         }
         else {
-            // show "No one" text
+            last.setVisibility(View.VISIBLE);
             data.changeFirst();
             hide();
         }

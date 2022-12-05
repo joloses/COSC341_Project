@@ -8,6 +8,7 @@ public class Global {
     int one = 0;
     int two = 0;
     int three = 0;
+    int point = 0;
 
     public static Global getInstance() {
         return instance;
@@ -25,10 +26,12 @@ public class Global {
 
     public void changeFirst() { firstTime = false; }
 
+    public void setPoint(int i) { point = i; }
     public void setOne() { one = 1; }
     public void setTwo() { two = 1; }
     public void setThree() { three = 1; }
 
+    public int getPoint() { return point; }
     public int getOne() { return one; }
     public int getTwo() { return two; }
     public int getThree() { return three; }

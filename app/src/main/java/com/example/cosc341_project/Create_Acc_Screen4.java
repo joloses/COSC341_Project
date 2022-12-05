@@ -32,7 +32,7 @@ public class Create_Acc_Screen4 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intentProfile4 = new Intent(Create_Acc_Screen4.this, Create_Acc_Screen4.class);
+                Intent intentProfile4 = new Intent(Create_Acc_Screen4.this, Profile.class);
                 Bundle bundleProfile4 = new Bundle();
 
                 if(sport1.isChecked() == true) {

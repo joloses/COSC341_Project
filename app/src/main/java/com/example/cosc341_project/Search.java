@@ -125,13 +125,11 @@ public class Search extends AppCompatActivity {
 
     public void toChat(View view) {
         Intent intent = new Intent(this, Chat_List.class);
-        startActivityForResult(intent, 1);
+        startActivity(intent);
     }
     // methods for dock buttons
-    /*
     public void toProfile(View view) {
         Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
     }
-     */
 }

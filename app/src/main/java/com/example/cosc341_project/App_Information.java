@@ -18,7 +18,7 @@ public class App_Information extends AppCompatActivity {
 
     }
 
-    public void backToSetting(View view){
+    public void backToSetting(View v){
         super.onBackPressed();
     }
 

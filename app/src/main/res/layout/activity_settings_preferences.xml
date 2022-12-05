@@ -18,7 +18,8 @@
         android:textColor="#000000"
         android:textSize="26sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/distanceTxt"
@@ -30,7 +31,8 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text1" />
+        app:layout_constraintTop_toBottomOf="@+id/text1"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/distanceBarVal"
@@ -42,7 +44,8 @@
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/distanceTxt"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <SeekBar
         android:id="@+id/distanceBar"
@@ -65,7 +68,8 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/distanceTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/distanceTxt"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/editMinAge"
@@ -81,7 +85,7 @@
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/ageText"
         app:layout_constraintTop_toBottomOf="@+id/distanceBar"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/dash"
@@ -92,7 +96,8 @@
         android:textSize="40sp"
         app:layout_constraintEnd_toStartOf="@+id/editMaxAge"
         app:layout_constraintStart_toEndOf="@+id/editMinAge"
-        app:layout_constraintTop_toBottomOf="@+id/distanceBar" />
+        app:layout_constraintTop_toBottomOf="@+id/distanceBar"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/editMaxAge"
@@ -108,7 +113,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/distanceBar"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/genderChoice"
@@ -120,7 +125,8 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ageText" />
+        app:layout_constraintTop_toBottomOf="@+id/ageText"
+        tools:ignore="HardcodedText" />
 
     <Spinner
         android:id="@+id/genderSpinner"
@@ -142,7 +148,8 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/genderChoice" />
+        app:layout_constraintTop_toBottomOf="@+id/genderChoice"
+        tools:ignore="HardcodedText" />
 
     <Spinner
         android:id="@+id/levelSpinner"
@@ -154,32 +161,75 @@
         app:layout_constraintTop_toBottomOf="@+id/genderSpinner"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="42dp"
+        android:text="Notifications"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/aboutBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Switch
+        android:id="@+id/switchNotif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="42dp"
+        android:checked="true"
+        android:minHeight="48dp"
+        android:showText="true"
+        android:switchTextAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/aboutBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:checked="false"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
     <Button
         android:id="@+id/aboutBtn"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginStart="78dp"
         android:layout_marginEnd="66dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="19dp"
         android:backgroundTint="#0000FE"
-        android:onClick="toInfoContact"
         android:text="App / Contact Information"
         app:iconTint="#000000"
         app:layout_constraintBottom_toTopOf="@+id/signOutBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/signOutBtn"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:layout_marginStart="154dp"
+        android:layout_marginStart="153dp"
         android:layout_marginEnd="153dp"
-        android:layout_marginBottom="66dp"
+        android:layout_marginBottom="33dp"
         android:backgroundTint="#0000FE"
         android:text="Sign Out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/toProfileBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="#0000FD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Profile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

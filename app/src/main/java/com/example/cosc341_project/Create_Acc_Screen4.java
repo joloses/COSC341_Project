@@ -32,35 +32,32 @@ public class Create_Acc_Screen4 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(Create_Acc_Screen4.this, Finder.class);
-                Bundle bundle = getIntent().getExtras();
+                Intent intentProfile4 = new Intent(Create_Acc_Screen4.this, Profile.class);
+                Bundle bundleProfile4 = new Bundle();
 
                 if(sport1.isChecked() == true) {
                     String s1 = (sport1.getText().toString());
-                    bundle.putString("sport1", s1);
+                    bundleProfile4.putString("sport1", s1);
                 }
                 if(sport2.isChecked() == true) {
                     String s2 = (sport2.getText().toString());
-                    bundle.putString("sport2", s2);
+                    bundleProfile4.putString("sport2", s2);
                 }
                 if(sport3.isChecked() == true) {
                     String s3 = (sport3.getText().toString());
-                    bundle.putString("sport3", s3);
+                    bundleProfile4.putString("sport3", s3);
                 }
                 if(sport4.isChecked() == true) {
                     String s4 = (sport4.getText().toString());
-                    bundle.putString("sport4", s4);
+                    bundleProfile4.putString("sport4", s4);
                 }
 
                 String s5 = text1.getText().toString();
-                bundle.putString("text1", s5);
+                bundleProfile4.putString("text1", s5);
 
-                intent.putExtras(bundle);
-                startActivity(intent);
+                intentProfile4.putExtras(bundleProfile4);
+                startActivity(intentProfile4);
             }
         });
-    }
-    public void finder(){
-
     }
 }

@@ -1,8 +1,10 @@
 package com.example.cosc341_project;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -37,6 +39,7 @@ public class Settings_Preferences extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 distanceVal = (TextView) findViewById(R.id.distanceBarVal);
                 distanceVal.setText(i + " km");
+
                 distanceChosen = i;
             }
 
@@ -54,10 +57,12 @@ public class Settings_Preferences extends AppCompatActivity {
         //Gather min and max age data here, take input as string and convert to Integer
         editMinAge = findViewById(R.id.editMinAge);
         String tempMinAge = editMinAge.getText().toString();
+
         minAgeChosen = Integer.parseInt(tempMinAge);
 
         editMaxAge = findViewById(R.id.editMaxAge);
         String tempMaxAge = editMaxAge.getText().toString();
+
         maxAgeChosen = Integer.parseInt(tempMaxAge);
 
 
@@ -68,6 +73,7 @@ public class Settings_Preferences extends AppCompatActivity {
                 android.R.layout.simple_spinner_item, genderArray);
         genderAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         genderSpinner.setAdapter(genderAdapter);
+
         genderChosen = genderSpinner.getSelectedItem().toString();
 
         //Put level of play choices in spinner and gather chosen option
@@ -77,6 +83,7 @@ public class Settings_Preferences extends AppCompatActivity {
                 android.R.layout.simple_spinner_item, levelArray);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         levelSpinner.setAdapter(adapter);
+
         levelChosen = levelSpinner.getSelectedItem().toString();
 
     }
@@ -88,8 +95,42 @@ public class Settings_Preferences extends AppCompatActivity {
         }
 
         //Set up signout page here -> intent to pop up confirming action then bring to main page (finish())
+        public void signOutConfirm(View v){
 
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 
+            alertDialogBuilder.setTitle("Confirm Sign Out");
+            alertDialogBuilder.setMessage("Are you sure,You want to sign out?");
+            alertDialogBuilder.setCancelable(false);
+
+            alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface arg0, int arg1) {
+                    finish();
+                }
+            });
+
+            alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            });
+            alertDialogBuilder.setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            });
+
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
+        }
+
+    public void backToProfile(View v){
+        super.onBackPressed();
+    }
 
 
 

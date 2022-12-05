@@ -12,10 +12,10 @@ import android.widget.Toast;
 
 public class Create_Acc_Screen1 extends AppCompatActivity {
 
-    public EditText fname;
-    public EditText lname;
-    public EditText age;
-    private Button next;
+    EditText fname;
+    EditText lname;
+    EditText age;
+    Button next;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -23,38 +23,48 @@ public class Create_Acc_Screen1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_acc_screen);
 
-        // first name entry box
+        // first name entry
         fname = findViewById(R.id.fname_filltxt);
 
-        // last name entry box
+        // last name entry
         lname = findViewById(R.id.lname_filltxt);
 
-        // age entry box
+        // age entry
         age = findViewById(R.id.age_filltxt);
 
-        // on button click
-        next = findViewById(R.id.ca2_nxtbutt);
+
+        next = findViewById(R.id.ca_nxtbutt);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    // check if first name has been entered
-                if(fname.getText().toString().trim().length() < 1) {
+                if(fname.getText().toString().trim().length() < 1){
                     String errMsg = "Please enter a first name";
                     Toast.makeText(Create_Acc_Screen1.this, errMsg, Toast.LENGTH_LONG).show();
-                    // check if last name has been entered
-                } else if(lname.getText().toString().trim().length() < 1){
+                }
+
+                if(lname.getText().toString().trim().length() < 1){
                     String errMsg = "Please enter a last name";
                     Toast.makeText(Create_Acc_Screen1.this, errMsg, Toast.LENGTH_LONG).show();
-                    // check if birthdate has been entered
-                } else if(age.getText().toString().trim().length() < 1){
+                }
+
+                if(age.getText().toString().trim().length() < 1){
                     String errMsg = "Please enter your age";
                     Toast.makeText(Create_Acc_Screen1.this, errMsg, Toast.LENGTH_LONG).show();
-                    // move on to the next screen
-                } else {
-                    Intent ca_intent = new Intent(Create_Acc_Screen1.this, Create_Acc_Screen2.class);
-                    startActivity(ca_intent);
                 }
+
+                Intent nextPage1 = new Intent(Create_Acc_Screen1.this, Create_Acc_Screen2.class);
+                startActivity(nextPage1);
+
+                Intent intentProfile1 = new Intent(Create_Acc_Screen1.this, Create_Acc_Screen1.class);
+                Bundle bundleProfile1 = new Bundle();
+
+                bundleProfile1.putString("firstName", fname.getText().toString());
+                bundleProfile1.putString("lastName", lname.getText().toString());
+                bundleProfile1.putString("age", age.getText().toString());
+
+                intentProfile1.putExtras(bundleProfile1);
             }
         });
+
     }
 }

@@ -12,7 +12,6 @@ public class Create_Acc_Screen3 extends AppCompatActivity {
 
     RadioButton pro1, pro2, pro3, pro4, pro5;
     Button nextButt;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,28 +28,31 @@ public class Create_Acc_Screen3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent ca_intent = new Intent(Create_Acc_Screen3.this, Create_Acc_Screen4.class);
-                Bundle bundle = new Bundle();
+                Intent nextPage3 = new Intent(Create_Acc_Screen3.this, Create_Acc_Screen4.class);
+                startActivity(nextPage3);
+
+                Intent intentProfile3 = new Intent(Create_Acc_Screen3.this, Create_Acc_Screen1.class);
+                Bundle bundleProfile3 = new Bundle();
 
                 if(pro1.isChecked() == true) {
                     String s1 = (pro1.getText().toString());
-                    bundle.putString("pro1", s1);
+                    bundleProfile3.putString("choice1", s1);
                 } else if(pro2.isChecked() == true) {
                     String s2 = (pro2.getText().toString());
-                    bundle.putString("pro2", s2);
+                    bundleProfile3.putString("choice2", s2);
                 } else if(pro3.isChecked() == true) {
                     String s3 = (pro3.getText().toString());
-                    bundle.putString("pro3", s3);
+                    bundleProfile3.putString("choice3", s3);
                 } else if(pro4.isChecked() == true) {
                     String s4 = (pro4.getText().toString());
-                    bundle.putString("pro4", s4);
+                    bundleProfile3.putString("choice4", s4);
                 } else if(pro5.isChecked() == true) {
                     String s5 = (pro5.getText().toString());
-                    bundle.putString("pro5", s5);
+                    bundleProfile3.putString("choice5", s5);
                 }
 
-                ca_intent.putExtras(bundle);
-                startActivity(ca_intent);
+                intentProfile3.putExtras(bundleProfile3);
+
             }
         });
     }

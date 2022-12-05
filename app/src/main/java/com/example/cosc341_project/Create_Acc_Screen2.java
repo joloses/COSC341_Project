@@ -55,9 +55,15 @@ public class Create_Acc_Screen2 extends AppCompatActivity {
                     Toast.makeText(Create_Acc_Screen2.this, errMsg, Toast.LENGTH_LONG).show();
                     // move on to the next screen
                 } else {
-                    Intent ca_intent = new Intent(Create_Acc_Screen2.this, Create_Acc_Screen3.class);
-                    startActivity(ca_intent);
+                    Intent nextPage2 = new Intent(Create_Acc_Screen2.this, Create_Acc_Screen3.class);
+                    startActivity(nextPage2);
                 }
+
+                Intent intentProfile2 = new Intent(Create_Acc_Screen2.this, Create_Acc_Screen1.class);
+                Bundle bundleProfile2 = new Bundle();
+
+                bundleProfile2.putString("email", email.getText().toString());
+                intentProfile2.putExtras(bundleProfile2);
             }
         });
     }

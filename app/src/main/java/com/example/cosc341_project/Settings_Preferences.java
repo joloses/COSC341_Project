@@ -1,21 +1,12 @@
 package com.example.cosc341_project;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
-
-import android.annotation.SuppressLint;
 import android.app.Notification;
-
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
-
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
@@ -24,11 +15,15 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+
 public class Settings_Preferences extends AppCompatActivity {
 
     //Buttons
     Button signOutBtn, toProfileBtn, infoBtn;
-    Switch toggleNotif;
     // Distance Variables
     SeekBar distanceBar;
     TextView distanceVal;
@@ -42,12 +37,16 @@ public class Settings_Preferences extends AppCompatActivity {
     //Notification Variables
     Switch notification;
     static boolean notifOn;
+    //Store data
+    Bundle settingsBundle;
 
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_preferences);
+
+        settingsBundle = new Bundle();
 
         //Gather distance here, change distanceVal as seek bar moves.
         distanceBar = findViewById(R.id.distanceBar);
@@ -58,6 +57,7 @@ public class Settings_Preferences extends AppCompatActivity {
                 distanceVal.setText(i + " km");
 
                 distanceChosen = i;
+                settingsBundle.putInt("Distance", distanceChosen);
             }
 
             @Override
@@ -76,12 +76,13 @@ public class Settings_Preferences extends AppCompatActivity {
         String tempMinAge = editMinAge.getText().toString();
 
         minAgeChosen = Integer.parseInt(tempMinAge);
+        settingsBundle.putInt("Minimum Age", minAgeChosen);
 
         editMaxAge = findViewById(R.id.editMaxAge);
         String tempMaxAge = editMaxAge.getText().toString();
 
         maxAgeChosen = Integer.parseInt(tempMaxAge);
-
+        settingsBundle.putInt("Maximum Age", maxAgeChosen);
 
         //Put gender choices in spinner and gather chosen option
         String[] genderArray = new String[]{"No Preference", "Male", "Female"};
@@ -92,6 +93,7 @@ public class Settings_Preferences extends AppCompatActivity {
         genderSpinner.setAdapter(genderAdapter);
 
         genderChosen = genderSpinner.getSelectedItem().toString();
+        settingsBundle.putString("Gender", genderChosen);
 
         //Put level of play choices in spinner and gather chosen option
         String[] levelArray = new String[]{"Casual/Fun", "Training", "(Semi) Pro"};
@@ -102,24 +104,24 @@ public class Settings_Preferences extends AppCompatActivity {
         levelSpinner.setAdapter(adapter);
 
         levelChosen = levelSpinner.getSelectedItem().toString();
+        settingsBundle.putString("Level", levelChosen);
 
         signOutBtn = findViewById(R.id.signOutBtn);
         toProfileBtn = findViewById(R.id.toProfileBtn);
         infoBtn = findViewById(R.id.aboutBtn);
-        toggleNotif = findViewById(R.id.switchNotif);
+        notification = findViewById(R.id.switchNotif);
 
-        signOutBtn.setOnClickListener(view -> signOutConfirm(view));
-        toProfileBtn.setOnClickListener(view -> backToProfile(view));
-        infoBtn.setOnClickListener(view -> toInfoContact(view));
-        toggleNotif.setOnClickListener(view -> toggleNotifications(view));
+        signOutBtn.setOnClickListener(this::signOutConfirm);
+        toProfileBtn.setOnClickListener(this::backToProfile);
+        infoBtn.setOnClickListener(this::toInfoContact);
+        notification.setOnClickListener(this::toggleNotifications);
+
 
     }
 
 
     //Notifications Tab (Fake notification for design purposes)
     public void toggleNotifications(View v) {
-
-        notification = findViewById(R.id.switchNotif);
 
         if (notification.isChecked()) {
             notifOn = true;
@@ -185,7 +187,9 @@ public class Settings_Preferences extends AppCompatActivity {
     }
 
     public void backToProfile(View v) {
-        super.onBackPressed();
+        Intent intent = new Intent(Settings_Preferences.this, Create_Acc_Screen4.class); //CHANGE TO PROFILE
+        intent.putExtras(settingsBundle);
+        startActivity(intent);
     }
 
 

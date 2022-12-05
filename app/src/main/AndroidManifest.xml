@@ -22,11 +22,7 @@
         <activity
             android:name=".Search"
             android:launchMode="singleTop"
-            android:exported="true"><!--CHANGE TO FALSE-->
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false"><!--CHANGE TO FALSE-->
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -89,7 +85,11 @@
         </activity>
         <activity
             android:name=".Entry_Screen"
-            android:exported="false"> <!--CHANGE TO TRUE-->
+            android:exported="true"> <!--CHANGE TO TRUE-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

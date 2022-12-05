@@ -88,6 +88,7 @@
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/border"
                 android:gravity="left"
+                android:onClick="openChat"
                 android:orientation="horizontal"
                 android:visibility="visible">
 
@@ -137,6 +138,7 @@
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/border"
                 android:gravity="left"
+                android:onClick="openChat"
                 android:orientation="horizontal"
                 android:visibility="visible">
 
@@ -196,6 +198,7 @@
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/border"
                 android:gravity="left"
+                android:onClick="openChat"
                 android:orientation="horizontal"
                 android:visibility="visible">
 

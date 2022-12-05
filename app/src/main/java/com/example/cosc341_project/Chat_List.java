@@ -15,6 +15,7 @@ public class Chat_List extends AppCompatActivity {
 
     // need to get info about connections
     TextView empty;
+    TextView test;
     LinearLayout block1;
     LinearLayout block2;
     LinearLayout block3;
@@ -22,11 +23,15 @@ public class Chat_List extends AppCompatActivity {
     TextView name1;
     TextView name2;
     TextView name3;
+    Global data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_list);
+
+        data = Global.getInstance();
+        test = findViewById(R.id.msg);
 
         block1 = findViewById(R.id.block1);
         block2 = findViewById(R.id.block2);
@@ -37,14 +42,39 @@ public class Chat_List extends AppCompatActivity {
         name3 = findViewById(R.id.name3);
 
         empty = findViewById(R.id.emptyTV);
+        if(data.empty())
+            hideDialog();
+        else {
+            showDialog();
+            hideText();
+        }
+    }
 
-        /*
-        if connections = 0
-            show empty textview
-        if connections = n
-            hide empty textview
-            show n blocks
-         */
+    public void showDialog() {
+        aHideDialog();
+        if(data.getOne() == 1)
+            block1.setVisibility(View.VISIBLE);
+        if(data.getTwo() == 1)
+            block2.setVisibility(View.VISIBLE);
+        if(data.getThree() == 1)
+            block3.setVisibility(View.VISIBLE);
+    }
+
+    public void hideDialog() {
+        block1.setVisibility(View.INVISIBLE);
+        block2.setVisibility(View.INVISIBLE);
+        block3.setVisibility(View.INVISIBLE);
+    }
+
+    public void aHideDialog() {
+        block1.setVisibility(View.GONE);
+        block2.setVisibility(View.GONE);
+        block3.setVisibility(View.GONE);
+    }
+
+    public void hideText() {
+        TextView aa = findViewById(R.id.emptyTV);
+        aa.setVisibility(View.GONE);
     }
 
     public void openChat(View view) {
@@ -71,7 +101,6 @@ public class Chat_List extends AppCompatActivity {
     }
 
     @SuppressLint("MissingSuperCall")
-    @Override
     protected void onActivityResult (int requestCode, int resultCode, Intent data) {
         TextView tv;
         String lastMsg = data.getStringExtra("lastMsg");
@@ -99,21 +128,23 @@ public class Chat_List extends AppCompatActivity {
         }
     }
 
-    // methods for dock buttons
-    /*
-    public void toGroups(View view) {
-        Intent intent = new Intent(this, Groups.class);
-        startActivity(intent);
-    }
-
     public void toSearch(View view) {
         Intent intent = new Intent(this, Search.class);
         startActivity(intent);
     }
 
+    /*
+    public void toChat(View view) {
+        Intent intent = new Intent(this, Chat_List.class);
+        startActivity(intent);
+    }
+     */
+
+    // methods for dock buttons
+    /*
     public void toProfile(View view) {
         Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
     }
-     */
+    */
 }

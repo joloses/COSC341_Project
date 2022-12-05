@@ -174,7 +174,7 @@
         android:layout_marginBottom="42dp"
         android:OnClick="toggleNotifications"
         android:checked="true"
-        android:onClick="toggleNotifications"
+        android:minHeight="48dp"
         android:showText="true"
         android:switchTextAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="24sp"
@@ -190,7 +190,6 @@
         android:layout_marginEnd="66dp"
         android:layout_marginBottom="19dp"
         android:backgroundTint="#0000FE"
-        android:onClick="toInfoContact"
         android:text="App / Contact Information"
         app:iconTint="#000000"
         app:layout_constraintBottom_toTopOf="@+id/signOutBtn"
@@ -207,7 +206,6 @@
         android:layout_marginBottom="33dp"
         android:OnClick="signOutConfirm"
         android:backgroundTint="#0000FE"
-        android:onClick="signOutConfirm"
         android:text="Sign Out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -215,13 +213,12 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/toProfileBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
         android:backgroundTint="#0000FD"
-        android:onClick="backToProfile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Profile" />

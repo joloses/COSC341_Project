@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.Spinner;
@@ -25,6 +26,9 @@ import android.widget.Toast;
 
 public class Settings_Preferences extends AppCompatActivity {
 
+    //Buttons
+    Button signOutBtn, toProfileBtn, infoBtn;
+    Switch toggleNotif;
     // Distance Variables
     SeekBar distanceBar;
     TextView distanceVal;
@@ -98,6 +102,16 @@ public class Settings_Preferences extends AppCompatActivity {
         levelSpinner.setAdapter(adapter);
 
         levelChosen = levelSpinner.getSelectedItem().toString();
+
+        signOutBtn = findViewById(R.id.signOutBtn);
+        toProfileBtn = findViewById(R.id.toProfileBtn);
+        infoBtn = findViewById(R.id.aboutBtn);
+        toggleNotif = findViewById(R.id.switchNotif);
+
+        signOutBtn.setOnClickListener(view -> signOutConfirm(view));
+        toProfileBtn.setOnClickListener(view -> backToProfile(view));
+        infoBtn.setOnClickListener(view -> toInfoContact(view));
+        toggleNotif.setOnClickListener(view -> toggleNotifications(view));
 
     }
 

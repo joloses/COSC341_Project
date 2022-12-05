@@ -133,18 +133,9 @@ public class Chat_List extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*
-    public void toChat(View view) {
-        Intent intent = new Intent(this, Chat_List.class);
-        startActivity(intent);
-    }
-     */
-
     // methods for dock buttons
-    /*
     public void toProfile(View view) {
         Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
     }
-    */
 }

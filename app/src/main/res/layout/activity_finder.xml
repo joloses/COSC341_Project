@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    tools:context=".Finder">
+
+    <ImageView
+        android:id="@+id/main_image_logo"
+        android:layout_width="253dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="68dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="230dp"
+        android:layout_height="208dp"
+        android:layout_marginTop="24dp"
+        android:adjustViewBounds="true"
+
+        android:onClick="onProfileClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_name" />
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="335dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="160dp"
+        android:text="@string/user_name"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="476dp"
+
+
+        android:onClick="onNextClick"
+        android:text="Next"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="476dp"
+
+        android:onClick="onBackClick"
+        android:text="Back"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_next"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/chat_bttn"
+        android:layout_width="80dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="24dp"
+        android:onClick="toChat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/groups"
+        app:srcCompat="@drawable/cha_bubble" />
+
+    <ImageView
+        android:id="@+id/groups"
+        android:layout_width="80dp"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/group" />
+
+    <ImageView
+        android:id="@+id/settings"
+        android:layout_width="80dp"
+        android:layout_height="65dp"
+        android:onClick="toSettings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.686"
+        app:layout_constraintStart_toEndOf="@+id/search"
+        app:srcCompat="@drawable/ic_settings_black_24dp" />
+
+    <ImageView
+        android:id="@+id/search"
+        android:layout_width="80dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chat_bttn"
+        app:srcCompat="@drawable/search2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

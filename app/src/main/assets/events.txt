@@ -1,0 +1,5 @@
+Music in the Park;20 April 2020 18:00;Kelowna City Park;10.00;Listen to some music at this location for a certain amount of time and enjoy!;event1
+Community Meeting;23 April 2020 10:00;Knox Mountain Meeting Room;0.00;Want to listen or take notes at your local community meeting? Here's the time and place to do it! Discuss and listen to important community issues.;event2
+Dinner and Wine;02 May 2020 17:00;Blu Saffron;50.00;Enjoy lovely food and wine at this event at this time and place. Limit of 32 tickets. Buy four tickets for the price of three. Here are more details.;event3
+Picnic and Wine;15 May 2020 12:00;Ancient Hill Estate Winery;5.00;Go outside and enjoy the sunshine, food, people, and wine. Games for kids provided along with tents for shade and room to sunbathe. Bring your family. Price is per person.;event4
+Food and Social;19 May 2020 14:00;Truck 59;10.00;Enjoy snacks with your favorite people, and maybe make some new friends at this food and social event. Games and conversation topics are provided.;event5

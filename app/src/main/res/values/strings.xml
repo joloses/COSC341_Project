@@ -1,3 +1,39 @@
 <resources>
     <string name="app_name">COSC341_Project</string>
+    <!-- User Info placeholders -->
+    <string name="user_name">%1$s</string>
+    <string name="user_objectives">I\'m here %1$s</string>
+    <string name="user_interests">I enjoy %1$s</string>
+    <string name="user_dob">%1$s</string>
+    <string name="user_pronoun">%1$s</string>
+    <string name="user_bio">More about me: %1$s</string>
+    <!-- Potential Friend Profile Information -->
+    <string name="name_susan">Susan.</string>
+    <string name="age_susan">Age: 23</string>
+    <string name="more_susan">I like playing casual sports and am looking for a partner.</string>
+
+    <string name="name_ray">Raymond</string>
+    <string name="age_ray">Age: 20</string>
+    <string name="more_ray">Just moved here and am looking for a group to join.</string>
+
+
+    <string name="name_ksoc">Kelowna Soccer</string>
+    <string name="age_ksoc">Age: 18</string>
+    <string name="more_ksoc">Looking for someone to fillout our team.</string>
+    <string-array name="interest_array">
+        <item>Hockey</item>
+        <item>Basketball</item>
+        <item>Baseball</item>
+        <item>Soccer</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Profile Pronouns -->
+    <string name="pro_he">He/Him</string>
+    <string name="pro_she">She/Her</string>
+    <string name="pro_they">They/Them</string>
+
+
+
+
 </resources>

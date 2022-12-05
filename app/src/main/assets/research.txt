@@ -1,0 +1,5 @@
+Here are some resources that inspired and assisted us with the creation of AgConnect's mobile application:
+Tangible User Interface for Social Interactions for the Elderly: A Review of Literature. (https://doi.org/10.1155/2018/7249378)
+Ninety years of change in life expectancy. (https://www150.statcan.gc.ca/n1/pub/82-624-x/2014001/article/14009-eng.htm)
+A portrait of the population aged 85 and older in 2016 in Canada. (https://www12.statcan.gc.ca/census-recensement/2016/as-sa/98-200-x/2016004/98-200-x2016004-eng.cfm)
+Seniors and information technology: Are we shrinking the digital divide? (https://scholarworks.lib.csusb.edu/jitim/vol17/iss2/4/)

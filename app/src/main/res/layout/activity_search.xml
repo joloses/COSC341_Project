@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Search">
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="24dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:scaleX="1.8"
+        android:scaleY="1.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:srcCompat="@drawable/cross" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/groupsB"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="1.5dp"
+            android:backgroundTint="#0000FF"
+            android:onClick="toGroups"
+            android:padding="4dp"
+            android:text="Groups" />
+
+        <Button
+            android:id="@+id/chatB"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="1.5dp"
+            android:backgroundTint="#0000FF"
+            android:padding="4dp"
+            android:text="Chat"
+            app:toggleCheckedStateOnClick="false" />
+
+        <Button
+            android:id="@+id/searchB"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="1.5dp"
+            android:backgroundTint="#0000FF"
+            android:onClick="toSearch"
+            android:padding="4dp"
+            android:text="Search" />
+
+        <Button
+            android:id="@+id/profileB"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="1.5dp"
+            android:backgroundTint="#0000FF"
+            android:onClick="toProfile"
+            android:padding="4dp"
+            android:text="Profile" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Discover:"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        android:padding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/groupsCH"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_margin="4dp"
+            android:text="Groups"
+            android:textSize="20sp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/singlesCH"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_margin="4dp"
+            android:text="Singles"
+            android:textSize="20sp" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:srcCompat="@drawable/rzhenie" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Some Guy, 19"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I like cats and memes in russian"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:layout_marginEnd="80dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:scaleX="1.3"
+        android:scaleY="1.3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageButton3"
+        app:srcCompat="@drawable/tick" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

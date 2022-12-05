@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/back.xml" value="0.2325" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.4115" />
+        <entry key="app/src/main/res/drawable-v24/ic_settings_black_24dp.xml" value="0.2325" />
+        <entry key="app/src/main/res/drawable-v24/rounded_corners_btn.xml" value="0.2325" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.4115" />
+        <entry key="app/src/main/res/layout/activity_app_information.xml" value="0.5020833333333333" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.5020833333333333" />
+        <entry key="app/src/main/res/layout/activity_finder.xml" value="0.6666666666666666" />
+        <entry key="app/src/main/res/layout/activity_friend_profile.xml" value="0.6666666666666666" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.4466666666666667" />
+        <entry key="app/src/main/res/layout/activity_settings_preferences.xml" value="0.5020833333333333" />
+        <entry key="app/src/main/res/layout/create_acc_screen.xml" value="0.5020833333333333" />
+        <entry key="app/src/main/res/layout/create_acc_screen2.xml" value="0.5020833333333333" />
+        <entry key="app/src/main/res/layout/create_acc_screen3.xml" value="0.5020833333333333" />
+        <entry key="app/src/main/res/layout/create_acc_screen4.xml" value="0.5020833333333333" />
+        <entry key="app/src/main/res/layout/entry_screen.xml" value="0.5020833333333333" />
+      </map>
+    </option>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

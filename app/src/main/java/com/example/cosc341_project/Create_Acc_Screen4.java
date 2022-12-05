@@ -32,8 +32,8 @@ public class Create_Acc_Screen4 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(Create_Acc_Screen4.this, Entry_Screen.class);
-                Bundle bundle = new Bundle();
+                Intent intent = new Intent(Create_Acc_Screen4.this, Finder.class);
+                Bundle bundle = getIntent().getExtras();
 
                 if(sport1.isChecked() == true) {
                     String s1 = (sport1.getText().toString());
@@ -59,5 +59,8 @@ public class Create_Acc_Screen4 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    public void finder(){
+
     }
 }

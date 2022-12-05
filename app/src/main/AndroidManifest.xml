@@ -62,6 +62,14 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".Finder"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
             android:name=".Entry_Screen"
             android:exported="true">
             <intent-filter>

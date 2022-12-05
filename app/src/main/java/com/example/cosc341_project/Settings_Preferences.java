@@ -54,11 +54,11 @@ public class Settings_Preferences extends AppCompatActivity {
         //Gather min and max age data here, take input as string and convert to Integer
         editMinAge = findViewById(R.id.editMinAge);
         String tempMinAge = editMinAge.getText().toString();
-        minAgeChosen = Integer.parseInt(tempMinAge);
+        //minAgeChosen = Integer.parseInt(tempMinAge);
 
         editMaxAge = findViewById(R.id.editMaxAge);
         String tempMaxAge = editMaxAge.getText().toString();
-        maxAgeChosen = Integer.parseInt(tempMaxAge);
+        //maxAgeChosen = Integer.parseInt(tempMaxAge);
 
 
         //Put gender choices in spinner and gather chosen option
@@ -86,6 +86,7 @@ public class Settings_Preferences extends AppCompatActivity {
             Intent intent = new Intent(Settings_Preferences.this, App_Information.class);
             startActivity(intent);
         }
+
 
         //Set up signout page here -> intent to pop up confirming action then bring to main page (finish())
 

@@ -20,23 +20,12 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/groupsB"
-            android:layout_width="94dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="1.5dp"
-            android:backgroundTint="#0000FF"
-            android:onClick="toGroups"
-            android:padding="4dp"
-            android:text="Groups" />
-
-        <Button
             android:id="@+id/chatB"
             android:layout_width="94dp"
             android:layout_height="wrap_content"
-            android:layout_margin="1.5dp"
+            android:layout_marginRight="16dp"
             android:backgroundTint="#0000FF"
             android:onClick="toChat"
-            android:padding="4dp"
             android:text="Chat"
             app:toggleCheckedStateOnClick="false" />
 
@@ -44,16 +33,16 @@
             android:id="@+id/searchB"
             android:layout_width="94dp"
             android:layout_height="wrap_content"
-            android:layout_margin="1.5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:backgroundTint="#0000FF"
-            android:padding="4dp"
             android:text="Search" />
 
         <Button
             android:id="@+id/profileB"
             android:layout_width="94dp"
             android:layout_height="wrap_content"
-            android:layout_margin="1.5dp"
+            android:layout_marginLeft="16dp"
             android:backgroundTint="#0000FF"
             android:onClick="toProfile"
             android:padding="4dp"
@@ -79,6 +68,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="20dp"
         android:padding="2dp"
+        app:checkedChip="@id/singlesCH"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -96,13 +86,15 @@
             android:layout_height="60dp"
             android:layout_margin="4dp"
             android:text="Singles"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            app:chipBackgroundColor="#8a8888" />
     </com.google.android.material.chip.ChipGroup>
 
     <LinearLayout
         android:id="@+id/profile_card"
         android:layout_width="345dp"
         android:layout_height="wrap_content"
+        android:layout_margin="12dp"
         android:layout_marginTop="8dp"
         android:onClick="openProfile"
         android:orientation="vertical"
@@ -138,7 +130,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="60dp"
-        android:backgroundTint="#0000FF"
+        android:backgroundTint="#30c758"
         android:onClick="like"
         android:text="Like"
         app:layout_constraintEnd_toEndOf="parent"
@@ -150,7 +142,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="8dp"
-        android:backgroundTint="#0000FF"
+        android:backgroundTint="#d43b3b"
         android:onClick="dislike"
         android:text="dislike"
         app:layout_constraintStart_toStartOf="parent"

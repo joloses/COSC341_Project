@@ -110,11 +110,6 @@ public class Search extends AppCompatActivity {
     }
     // methods for dock buttons
     /*
-    public void toGroups(View view) {
-        Intent intent = new Intent(this, Groups.class);
-        startActivity(intent);
-    }
-
     public void toProfile(View view) {
         Intent intent = new Intent(this, Profile.class);
         startActivity(intent);

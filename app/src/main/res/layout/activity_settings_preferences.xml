@@ -31,7 +31,8 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toProfileBtn"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/distanceTxt"
@@ -131,22 +132,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="21dp"
         android:text="Level of Play"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/genderChoice"
         tools:ignore="HardcodedText" />
 
     <Spinner
         android:id="@+id/levelSpinner"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toEndOf="@+id/levelChoice"
-        app:layout_constraintTop_toBottomOf="@+id/switchNotif"
+        app:layout_constraintTop_toBottomOf="@+id/genderSpinner"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
@@ -154,20 +155,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="24dp"
         android:text="Notifications"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/genderChoice"
+        app:layout_constraintTop_toBottomOf="@+id/levelChoice"
         tools:ignore="HardcodedText" />
 
     <Switch
         android:id="@+id/switchNotif"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="77dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="68dp"
         android:checked="true"
         android:minHeight="48dp"
         android:showText="true"

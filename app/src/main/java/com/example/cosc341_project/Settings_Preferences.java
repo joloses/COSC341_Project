@@ -51,7 +51,6 @@ public class Settings_Preferences extends AppCompatActivity {
         distanceChosen = Integer.parseInt(editDistance.getText().toString());
         settingsBundle.putInt("Distance", distanceChosen);
 
-
         //Gather min and max age data here, take input as string and convert to Integer
         editMinAge = findViewById(R.id.editMinAge);
         String tempMinAge = editMinAge.getText().toString();

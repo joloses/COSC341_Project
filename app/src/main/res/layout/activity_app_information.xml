@@ -11,12 +11,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="126dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="133dp"
         android:text="About the App"
         android:textColor="#000000"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -79,8 +80,8 @@
         android:id="@+id/textView8"
         android:layout_width="380dp"
         android:layout_height="51dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
         android:lineSpacingExtra="4sp"
         android:text="To get in contact with us, you can inquire at TeamUpApp@gmail.com"
         android:textAlignment="center"
@@ -94,12 +95,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="116dp"
         android:layout_marginEnd="116dp"
-        android:layout_marginBottom="106dp"
+        android:layout_marginBottom="24dp"
         android:backgroundTint="#0000FE"
         android:onClick="backToSetting"
         android:text="Back to Settings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

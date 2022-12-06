@@ -15,6 +15,7 @@ public class Profile extends AppCompatActivity {
     Global data;
     TextView name;
     TextView desc;
+    //String d = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +29,15 @@ public class Profile extends AppCompatActivity {
 
         // set name and description
         name.setText(data.fname + " " + data.lname + ", " + data.age);
-        desc.setText(data.gender + "\n" + data.sport1 + ", " + data.sport3.toLowerCase(Locale.ROOT));
+        desc.setText(data.gender + "\n" + data.sport1 + " " + data.sport3 + " " + data.sport2 + " " + data.sport4 + " " + data.sport5);
     }
+
+    /*
+    public void parseDesc() {
+        if(!data.sport1.equalsIgnoreCase(""))
+            d += data.sport1;
+    }
+     */
 
     public void toSettings(View view) {
         Intent intent = new Intent(this, Settings_Preferences.class);

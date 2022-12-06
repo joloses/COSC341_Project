@@ -105,6 +105,24 @@ public class Chat_List extends AppCompatActivity {
         startActivityForResult(intent, 1);
     }
 
+    /*
+    public void seeProfile(View view) {
+        Intent intent = new Intent(this, SeeProfile.class);
+        switch (view.getId()) {     // pass profile pic and name
+            case R.id.block1:
+                intent.putExtra("num", 0);
+                break;
+            case R.id.block2:
+                intent.putExtra("num", 1);
+                break;
+            case R.id.block3:
+                intent.putExtra("num", 2);
+                break;
+        }
+        startActivity(intent);
+    }
+     */
+
     // prevents creating another instance of chat_list and show your last message
     @SuppressLint("MissingSuperCall")
     protected void onActivityResult (int requestCode, int resultCode, Intent data) {

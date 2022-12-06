@@ -2,6 +2,7 @@ package com.example.cosc341_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,7 @@ public class Chat extends AppCompatActivity {
     ImageView img;
     TextView name;
     int img_id;
+    Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,7 @@ public class Chat extends AppCompatActivity {
 
         // get name and image data
         Intent intent = getIntent();
-        Bundle bundle = intent.getExtras();
+        bundle = intent.getExtras();
 
         // set name and image
         img = findViewById(R.id.profilePic);
@@ -72,6 +74,8 @@ public class Chat extends AppCompatActivity {
     // "send" message
     public void send(View view) {
         String msg = et.getText().toString();
+        if(msg.trim().length() == 0)
+            return;
         if(count > 0)
             shift();
         tv.setText(msg);

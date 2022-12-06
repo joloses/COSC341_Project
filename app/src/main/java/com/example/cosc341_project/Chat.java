@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 public class Chat extends AppCompatActivity {
 
+    // get views
     ArrayList<TextView> arr = new ArrayList<>();
     TextView tv;
     EditText et;
@@ -20,22 +21,25 @@ public class Chat extends AppCompatActivity {
 
     ImageView img;
     TextView name;
-    int i;
+    int img_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
+        // get name and image data
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
 
+        // set name and image
         img = findViewById(R.id.profilePic);
-        i = bundle.getInt("img");
-        setImg(i);
+        img_id = bundle.getInt("img");
+        setImg(img_id);
         name = findViewById(R.id.chatName);
         name.setText(bundle.getString("name"));
 
+        // get views
         et = findViewById(R.id.enterText);
         arr.add(findViewById(R.id.tv1));
         arr.add(findViewById(R.id.tv2));
@@ -50,6 +54,7 @@ public class Chat extends AppCompatActivity {
         tv = arr.get(count);
     }
 
+    // set image with passed img_id
     public void setImg(int i) {
         switch (i) {
             case 1:
@@ -64,6 +69,7 @@ public class Chat extends AppCompatActivity {
         }
     }
 
+    // "send" message
     public void send(View view) {
         String msg = et.getText().toString();
         if(count > 0)
@@ -73,7 +79,9 @@ public class Chat extends AppCompatActivity {
         et.setText("");
     }
 
-    public void shift() {   // looks ugly and needs a loop
+    // move the text one textview up, so it seems like texting
+    // looks ugly and needs a loop
+    public void shift() {
         TextView t1 = arr.get(0);
         TextView t2 = arr.get(1);
         TextView t3 = arr.get(2);
@@ -96,34 +104,13 @@ public class Chat extends AppCompatActivity {
         t2.setText(t1.getText().toString());
     }
 
-    public void toChat(View view) {
-        finish();
-    }
-
+    // back to chat_list
     public void back(View view) {
         Intent intent = new Intent();
         intent.putExtra("lastMsg", arr.get(0).getText().toString());
-        intent.putExtra("i", Integer.toString(i));
+        intent.putExtra("i", Integer.toString(img_id));
         setResult(1, intent);
         finish();
     }
-
-    // methods to jump to different views
-    /*
-    public void toGroups(View view) {
-        Intent intent = new Intent(this, Groups.class);
-        startActivity(intent);
-    }
-
-    public void toSearch(View view) {
-        Intent intent = new Intent(this, Search.class);
-        startActivity(intent);
-    }
-
-    public void toProfile(View view) {
-        Intent intent = new Intent(this, Profile.class);
-        startActivity(intent);
-    }
-     */
 
 }

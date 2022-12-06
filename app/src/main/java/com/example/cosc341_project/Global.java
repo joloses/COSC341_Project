@@ -2,12 +2,14 @@ package com.example.cosc341_project;
 
 public class Global {
     private static Global instance = new Global();
+    // search data
     boolean firstTime = true;
     int one = 0;
     int two = 0;
     int three = 0;
     int point = 0;
 
+    // create profile data
     String fname = "";
     String lname = "";
     String age = "";
@@ -34,6 +36,7 @@ public class Global {
 
     public void changeFirst() { firstTime = false; }
 
+    // track search state
     public void setPoint(int i) { point = i; }
     public void setOne() { one = 1; }
     public void setTwo() { two = 1; }

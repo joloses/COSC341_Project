@@ -13,9 +13,8 @@ import org.w3c.dom.Text;
 
 public class Chat_List extends AppCompatActivity {
 
-    // need to get info about connections
+    // get views
     TextView empty;
-    TextView test;
     LinearLayout block1;
     LinearLayout block2;
     LinearLayout block3;
@@ -23,6 +22,8 @@ public class Chat_List extends AppCompatActivity {
     TextView name1;
     TextView name2;
     TextView name3;
+
+    // to get connections data
     Global data;
 
     @Override
@@ -30,9 +31,9 @@ public class Chat_List extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_list);
 
-        data = Global.getInstance();
-        test = findViewById(R.id.msg);
+        data = Global.getInstance();    // get data object
 
+        // get views
         block1 = findViewById(R.id.block1);
         block2 = findViewById(R.id.block2);
         block3 = findViewById(R.id.block3);
@@ -42,16 +43,17 @@ public class Chat_List extends AppCompatActivity {
         name3 = findViewById(R.id.name3);
 
         empty = findViewById(R.id.emptyTV);
-        if(data.empty())
+        if(data.empty())       // if no connections made, hide dialogs
             hideDialog();
-        else {
+        else {                  // else show dialogs + hide text
             showDialog();
             hideText();
         }
     }
 
+    // check connections in data, and show respective dialogs
     public void showDialog() {
-        aHideDialog();
+        goneDialog();
         if(data.getOne() == 1)
             block1.setVisibility(View.VISIBLE);
         if(data.getTwo() == 1)
@@ -60,28 +62,32 @@ public class Chat_List extends AppCompatActivity {
             block3.setVisibility(View.VISIBLE);
     }
 
+    // hide dialogs
     public void hideDialog() {
         block1.setVisibility(View.INVISIBLE);
         block2.setVisibility(View.INVISIBLE);
         block3.setVisibility(View.INVISIBLE);
     }
 
-    public void aHideDialog() {
+    // minimize dialogs
+    public void goneDialog() {
         block1.setVisibility(View.GONE);
         block2.setVisibility(View.GONE);
         block3.setVisibility(View.GONE);
     }
 
+    // minimize "empty" textview
     public void hideText() {
         TextView aa = findViewById(R.id.emptyTV);
         aa.setVisibility(View.GONE);
     }
 
+    // open chat
     public void openChat(View view) {
         Bundle extras = new Bundle();
         Intent intent = new Intent(this, Chat.class);
 
-        switch (view.getId()) {
+        switch (view.getId()) {     // pass profile pic and name
             case R.id.block1:
                 extras.putString("name", name1.getText().toString());
                 extras.putInt("img", 1);
@@ -95,11 +101,11 @@ public class Chat_List extends AppCompatActivity {
                 extras.putInt("img", 3);
                 break;
         }
-
         intent.putExtras(extras);
         startActivityForResult(intent, 1);
     }
 
+    // prevents creating another instance of chat_list and show your last message
     @SuppressLint("MissingSuperCall")
     protected void onActivityResult (int requestCode, int resultCode, Intent data) {
         TextView tv;
@@ -128,12 +134,12 @@ public class Chat_List extends AppCompatActivity {
         }
     }
 
+    // dock navigation methods
     public void toSearch(View view) {
         Intent intent = new Intent(this, Search.class);
         startActivity(intent);
     }
 
-    // methods for dock buttons
     public void toProfile(View view) {
         Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
